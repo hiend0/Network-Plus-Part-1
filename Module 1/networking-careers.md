@@ -16,7 +16,7 @@ Use Google or another search engine to explore the following questions. Take not
 
 2. **How has the rise of cloud computing changed networking careers?**  
    Explore how companies like AWS, Azure, and Google Cloud have centralized many networking functions.
-
+sdsad
 3. **Why are smaller organizations using hybrid cloud networks?**  
    Investigate how businesses combine on-premises infrastructure with cloud services, and what challenges they face.
 

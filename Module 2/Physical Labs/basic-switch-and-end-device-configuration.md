@@ -56,7 +56,7 @@ You will apply IP addressing to the PCs and switches to enable communication bet
 
 **Screenshot Placeholder:**  
 `!PC IP Configuration`
-
+![alt text](<Basic Switch Lab.PNG>)
 ---
 
 ### Step 3: Configure and Verify Basic Switch Settings

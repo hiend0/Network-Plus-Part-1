@@ -116,6 +116,6 @@
 
    Knowing the MAC address of a device can be helpful in serveral reasons. One reason would be great for tracking devices. Network admins may need the MAC address to identify the devices by the manufacturer. MAC address helps with network management, troubleshooting, and security. 
 
-   # Reflective Questions
+   # Lab Summary
    In this lab I learn how to anaylze ethernet MAC address. I learned that MAC address OUI shows the manufacturer and I can use an OUI lookup tool to find the vendor. This lab highlighted the importance of MAC addresses in networking. I gained insight into how switches forward data frames and how network admins can use this information for tasks like access control and monitoring network traffic. 
 

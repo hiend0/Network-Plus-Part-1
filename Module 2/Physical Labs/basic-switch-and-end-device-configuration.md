@@ -109,5 +109,5 @@ You will apply IP addressing to the PCs and switches to enable communication bet
    _Answer:_  
    There's several factors that could prevent a ping from being sent like faulty cables, bad network ports, wrong IP adress or subnet mask, firewall, switch or router misconfiguration, and more.
 
-   # Reflective Questions
+   # Lab Summary
    During this lab I learn a lot about connecting physical switches to the computer. I learn how to use PuTTy for the first time. Learning different commands for displaying running configuration, IOS version, and interface status. The biggest struggle I had was researching the commands I needed to complete the lab. 

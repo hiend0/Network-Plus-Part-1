@@ -68,12 +68,15 @@
 
 1. **Are there any MAC addresses recorded in the MAC address table?**  
    _Answer:_  
+   If there's traffic flowing through the switch, the switch should have some MAC addresses listed. It's likely that the switch has learned MAC addresses via the F0/1 port on S1. If the switch has learn any other MAC addresses through actice traffic like pings or other communication, those address will be listed. 
 
 2. **What MAC addresses are recorded in the table? To which switch ports are they mapped and to which devices do they belong?**  
    _Answer:_  
+   The S1 F0/1 MAC address and PC-A MAC are mapped to S2 F0/1.
 
 3. **If you had not previously recorded MAC addresses of network devices in Step 1, how could you tell which devices the MAC addresses belong to using only the output from `show mac address-table`? Does it work in all scenarios?**  
-   _Answer:_  
+   _Answer:_ 
+   While the show MAC address table command provides usefull information about the MAC address learned on each port, it does not always work in all scenarios. Especially when multiple MAC addresses share a port or if the switch hasn't learned or refreshed the MAC address table.   
 
 ---
 
@@ -81,6 +84,7 @@
 
 1. **Does the MAC address table have any addresses in it for VLAN 1? Are there other MAC addresses listed?**  
    _Answer:_  
+   No. If there were other MAC addresses it would be displayed separately under their own VLAN IDs. 
 
 2. **Wait 10 seconds and recheck. Are there new addresses in the MAC address table?**  
    _Answer:_  
@@ -93,6 +97,7 @@
 
 2. **Did all devices have successful replies to pings? If not, check cabling and IP configurations.**  
    _Answer:_  
+   Yes, cables and IP configurations were done correctly.
 
 3. **Has the switch added additional MAC addresses to the MAC address table? If so, which addresses and devices?**  
    _Answer:_  
@@ -106,3 +111,7 @@
 
 **What might be some of the challenges on larger networks when switches and PCs dynamically build ARP caches and MAC address tables?**  
 _Answer:_  
+In a larger network means large numbers of devices. A large number of devices means more ARP requests, leading to an ARP flood. Which will increase the load of the network device and can reduce performance. Mac address table will expand from a larger network, which mean the switch must store more MAC addresses in their table. 
+
+# Lab Summary
+

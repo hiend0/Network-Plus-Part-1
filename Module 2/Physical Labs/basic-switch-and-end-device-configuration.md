@@ -78,10 +78,10 @@ You will apply IP addressing to the PCs and switches to enable communication bet
 
 | Interface | S1 Status | S1 Protocol | S2 Status | S2 Protocol |
 |-----------|-----------|-------------|-----------|-------------|
-| F0/1      |           |             |           |             |
-| F0/6      |           |             |           |             |
-| F0/18     |           |             |           |             |
-| VLAN 1    |           |             |           |             |
+| F0/1      |    up       |      up       |  up         |    up         |
+| F0/6      |   up        |       up      |   down        |    down         |
+| F0/18     |      down     |    down         |    up       |     up        |
+| VLAN 1    |       up    |       up      |    up       |    up         |
 
 ---
 
@@ -89,11 +89,13 @@ You will apply IP addressing to the PCs and switches to enable communication bet
 
 - From a PC, ping S1 and S2  
   _Were the pings successful?_  
-  _Answer:_  
+  _Answer:_ 
+  The pings were successful
 
 - From a switch, ping PC-A and PC-B  
   _Were the pings successful?_  
-  _Answer:_  
+  _Answer:_ 
+  The pings were successful 
 
 ---
 
@@ -101,6 +103,11 @@ You will apply IP addressing to the PCs and switches to enable communication bet
 
 1. **Why are some FastEthernet ports on the switches up and others down?**  
    _Answer:_  
+   FastEthernet ports are up when a cable is connected. If not connected or administratively disabled, the ports will remain down.  
 
 2. **What could prevent a ping from being sent between the PCs?**  
    _Answer:_  
+   There's several factors that could prevent a ping from being sent like faulty cables, bad network ports, wrong IP adress or subnet mask, firewall, switch or router misconfiguration, and more.
+
+   # Reflective Questions
+   During this lab I learn a lot about connecting physical switches to the computer. I learn how to use PuTTy for the first time. Learning different commands for displaying running configuration, IOS version, and interface status. The biggest struggle I had was researching the commands I needed to complete the lab. 

@@ -25,15 +25,14 @@
 ### Step 2: Examine the network configuration of the PC
 
 **Screenshot Placeholder:**  
-`!ipconfig output`
+
 ![alt text](<7.1.6 Lab Module 2 2.png>)
 
 ---
 
 ### Step 3: Examine Ethernet frames in a Wireshark capture
 
-**Screenshot Placeholder:**  
-`![ARP request frame](path/to/screenshot`
+**Screenshot Placeholder:**
 
 ![alt text](<7.1.6 Lab Module 2.png>)
 ---

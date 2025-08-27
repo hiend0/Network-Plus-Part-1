@@ -30,10 +30,16 @@
 ### Step 2: Configure PC hosts
 
 **Screenshot Placeholder:**  
-`![PC Configuration](path/to/sStep 3: Initialize and reload switches as necessary
+PC Configuration
+![alt text](<7.2.7 Lab - View Network Device MAC Addresses 3.png>)
+
+![alt text](<7.2.7 Lab - View Network Device MAC Addresses 4.png>)
 
 **Screenshot Placeholder:**  
 `!Switch Initialization`
+![alt text](<7.2.7 Lab - View Network Device MAC Addresses.png>)
+
+![alt text](<7.2.7 Lab - View Network Device MAC Addresses 2.png>)
 
 ---
 
@@ -52,16 +58,19 @@
 
 1. **PC-A MAC Address:**  
    _Answer:_  
+   00D0.FF34.7394
 
 2. **PC-B MAC Address:**  
    _Answer:_  
+   0006.2ACC.B326
 
 3. **S1 Fast Ethernet 0/1 MAC Address:**  
    _Answer:_  
+   0060.5ce2.0001
 
 4. **S2 Fast Ethernet 0/1 MAC Address:**  
    _Answer:_  
-
+000c.cf6b.0701
 ---
 
 ### Step 2: Display the switch MAC address table
@@ -88,12 +97,13 @@
 
 2. **Wait 10 seconds and recheck. Are there new addresses in the MAC address table?**  
    _Answer:_  
-
+No, after 10 seconds there were no new addresses.
 ---
 
 ### Step 4: From PC-B, ping the devices on the network and observe the switch MAC address table
 1. **How many device IP-to-MAC address pairs have been learned by ARP (excluding multicast/broadcast)?**  
    _Answer:_  
+ There's 3 devices have been learn by ARP.
 
 2. **Did all devices have successful replies to pings? If not, check cabling and IP configurations.**  
    _Answer:_  
@@ -101,9 +111,12 @@
 
 3. **Has the switch added additional MAC addresses to the MAC address table? If so, which addresses and devices?**  
    _Answer:_  
+   Yes, the switch addes additional MAC addresses. The address and devices were 0006.2acc.b326.
 
 4. **Does the PC-B ARP cache have additional entries for all network devices that were sent pings?**  
    _Answer:_  
+   Yes, PC-B ARP cache have 3 more entries with all 3 pings I sent. 
+
 
 ---
 

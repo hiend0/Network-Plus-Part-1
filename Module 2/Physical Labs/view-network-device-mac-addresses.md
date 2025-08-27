@@ -29,14 +29,17 @@
 
 - **Were the pings successful? Explain.**  
   _Answer:_  
-  The ping was unsuccessful. The switch hasn't been configured yet.
+  The ping was unsuccessful. The switch IP hasn't been configured.
 
 ---
 
 ### Step 3: Configure basic settings for the switch
 
 **Screenshot Placeholder:**  
-`![Switch Configuration](path/to/screenshoterify network connectivity
+
+![alt text](<7.2.7 Lab.PNG>)
+
+![alt text](<7.2.7 Lab 2.PNG>)
 
 - **Were the pings successful?**  
   _Answer:_  
@@ -58,26 +61,40 @@
 
 3. **Using the example above, find the name of the vendor that manufactured this NIC.**  
    _Answer:_  
-   Dell Inc
+   Dell
+
+### Screen shot of PC-A ipconfig /all
+
+![alt text](<7.2.7 Lab 3.PNG>)
 
 4. **Identify the OUI portion of the MAC address for the NIC of PC-A.**  
    _Answer:_  
+  8C-EC-4B 
 
 5. **Identify the serial number portion of the MAC address for the NIC of PC-A.**  
    _Answer:_  
+   78-F3-9D
 
 6. **Identify the name of the vendor that manufactured the NIC of PC-A.**  
    _Answer:_  
+   Dell
 
 ---
 
 ### Step 6: Analyze the MAC address for the S1 VLAN 1 interface
 
+### Screenshot of Switch S1 VLAN 1 interface
+
+![alt text](<7.2.7 Lab 4.PNG>)
+
+
 1. **What is the MAC address for VLAN 1 on S1?**  
    _Answer:_  
+   70da.48.e7.2ac0
 
 2. **What is the MAC serial number for VLAN 1?**  
-   _Answer:_  
+   _Answer:_
+     E7-2A-C0
 
 3. **What does BIA stand for?**  
    _Answer:_  
@@ -90,18 +107,22 @@
 
 ### Step 7: View the MAC addresses on the switch
 
+### Screenshots of the MAC address on the switch
+
+![alt text](<7.2.7 Lab 5.PNG>)
+
+
 1. **What Layer 2 addresses are displayed on S1?**  
    _Answer:_  
-   001b.0c6d.8f40
-   5c26.0a24.2a60
+   70da.48e7.2ac0
 
 2. **What Layer 3 addresses are displayed on S1?**  
    _Answer:_  
    192.168.1.2
-   192.168.1.3
 
 3. **Did the switch display the MAC address of PC-A? If yes, what port was it on?**  
-   _Answer:_  
+   _Answer:_  Yes, under hardware address.
+
 
 ---
 

@@ -126,5 +126,5 @@ No, after 10 seconds there were no new addresses.
 _Answer:_  
 In a larger network means large numbers of devices. A large number of devices means more ARP requests, leading to an ARP flood. Which will increase the load of the network device and can reduce performance. Mac address table will expand from a larger network, which mean the switch must store more MAC addresses in their table. 
 
-# Lab Summary
-
+## Lab Summary
+During this lab I learn that Layer 2 LAN switch delivers Ethernet frames to devices on a local network by using MAC addresses. Seeing what will happen when I ping multiple devices and observing how two switches build their MAC address table. The MAC address table is essential for data delivery within a local network. This lab experience showed me the importance of MAC address table and that I can apply this to any future jobs in networking.

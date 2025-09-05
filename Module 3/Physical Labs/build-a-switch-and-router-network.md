@@ -66,14 +66,17 @@
 ### Step 4: Configure R1, ISP, and S1 using provided initial configurations
 
 **Screenshot Placeholder:**  
-`!Device Configuration`
+![alt text](<Lab - Use Ping and Traceroute to Test Network Connectivity.png>)
+![alt text](<Lab - Use Ping and Traceroute to Test Network Connectivity 1.png>)
+![alt text](<Lab - Use Ping and Traceroute to Test Network Connectivity 2.png>)
 
 ---
 
 ### Step 5: Configure IP host table on R1
 
 **Screenshot Placeholder:**  
-`!Host Table Configuration`
+![alt text](<Lab - Use Ping and Traceroute to Test Network Connectivity 3.png>)
+
 
 ---
 
@@ -86,20 +89,20 @@
 
 | Destination                  | Avg RTT (ms) | TTL / Hop Limit |
 |-----------------------------|--------------|-----------------|
-| 192.168.1.10                |              |                 |
-| 2001:db8:acad:1::10         |              |                 |
-| 192.168.1.1 (R1)            |              |                 |
-| 2001:db8:acad:1::1 (R1)     |              |                 |
-| 192.168.1.2 (S1)            |              |                 |
-| 2001:db8:acad:1::2 (S1)     |              |                 |
-| 64.100.0.2 (R1)             |              |                 |
-| 2001:db8:acad::2 (R1)       |              |                 |
-| 64.100.0.1 (ISP)            |              |                 |
-| 2001:db8:acad::1 (ISP)      |              |                 |
-| 209.165.200.225 (ISP G0/0/1)|              |                 |
-| 2001:db8:acad:200::225      |              |                 |
-| 209.165.200.226 (External)  |              |                 |
-| 2001:db8:acad:200::226      |              |                 |
+| 192.168.1.10                |      <1ms        |     128            |
+| 2001:db8:acad:1::10         |      2ms         |     128            |
+| 192.168.1.1 (R1)            |      <1ms        |    255             |
+| 2001:db8:acad:1::1 (R1)     |      <1ms        |    255             |
+| 192.168.1.2 (S1)            |      <1ms        |    255             |
+| 2001:db8:acad:1::2 (S1)     |      <1ms        |    255             |
+| 64.100.0.2 (R1)             |      <1ms        |    255             |
+| 2001:db8:acad::2 (R1)       |      <1ms        |    255             |
+| 64.100.0.1 (ISP)            |      <1ms        |    254             |
+| 2001:db8:acad::1 (ISP)      |      <1ms        |    254             |
+| 209.165.200.225 (ISP G0/0/1)|      <1ms        |    254             |
+| 2001:db8:acad:200::225      |      <1ms        |    254             |
+| 209.165.200.226 (External)  |      <1ms        |    126             |
+| 2001:db8:acad:200::226      |      <1ms        |    126             |
 
 ---
 
@@ -153,16 +156,26 @@
 ## Reflection Questions
 
 1. What could prevent ping or traceroute responses besides connectivity issues?  
-   _Answer:_  
+   _Answer:_ 
+
+    There are several ways that could prevent ping or traceroute like host or network firewall, ICMP rate limitiing, network delay, routing issues, and more.
 
 2. What does the ping response to a non-existent address like 209.165.200.227 indicate?  
    _Answer:_  
 
+   The response would be Request timed out. This would indicates that no response was received. Possible causes could be no response from no host configured with that IP, blocked by firewall, on a network that ignores ICMP, or destination unreachable.
+
 3. What does the ping response to an unreachable network like 192.168.5.3 indicate?  
    _Answer:_  
 
+   Destination host unreachable would be the ping response. This means there's no route to the destination assuming 192.168.5.3 is not part of the routing table.
+
 4. What is the default IPv4 TTL on Windows and Cisco devices?  
-   _Answer:_  
+   _Answer:_ 
+
+   IPv4 Default TTL on Windows is 128 and Cisco default TTL is 255.
 
 5. What is the default IPv6 Hop Limit on Windows and Cisco devices?  
    _Answer:_  
+
+   IPv6 default hop limit is 128 on Windows and Cisco default hop limit is 64.

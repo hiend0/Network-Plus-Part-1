@@ -57,11 +57,15 @@ In this lab, you will configure IPv6 addresses on hosts and network devices. You
 
 - Assign global unicast addresses to G0/0/0 and G0/0/1  
 - Manually configure link-local address `fe80::1` on both interfaces  
-- Use `show ipv6 interface` to verify link-local address  
+- Use `show ipv6 interface` to verify link-local address 
+
+![alt text](<Configure IPv6 Addresses on Network Devices.png>)
 
 **Question:**  
 - Which two multicast groups are assigned to interface G0/0/0?  
   _Answer:_  
+
+  Multicast groups FF02::1 and FF02::1:FF00:1.
 
 ---
 
@@ -70,18 +74,26 @@ In this lab, you will configure IPv6 addresses on hosts and network devices. You
 - Use `ipv6 unicast-routing` command  
 - Use `ipconfig` on PC-B to verify IPv6 address assignment via SLAAC  
 
+![alt text](<Configure IPv6 Addresses on Network Devices 1.png>)
+
 **Questions:**  
 - Has an IPv6 unicast address been assigned to PC-B?  
   _Answer:_  
+
+  No, it hasn't.
 - Why did PC-B receive the Global Routing Prefix and Subnet ID from R1?  
   _Answer:_  
+
+  R1 IPv6 interfaces are now poart of the all-router multicast group FF02::2. R1 will broadcast its link-local address as the Default Gateway, allowing PCs to obtain their IPv6 addresses. 
 
 ---
 
 ### Step 3: Assign IPv6 Addresses to S1 Management Interface
 
 - Assign global unicast and link-local address  
-- Use `show ipv6 interface` to verify configuration  
+- Use `show ipv6 interface` to verify configuration 
+
+![alt text](<Configure IPv6 Addresses on Network Devices 2.png>)
 
 ---
 
@@ -94,11 +106,16 @@ In this lab, you will configure IPv6 addresses on hosts and network devices. You
 
 ## Part 3: Verify End-to-End Connectivity
 
-- From PC-A, ping `fe80::1` (R1 G0/0/1)  
-- Ping S1 management interface from PC-A  
-- Use `tracert` from PC-A to PC-B  
-- From PC-B, ping PC-A  
+- From PC-A, ping `fe80::1` (R1 G0/0/1) 
+![alt text](<Configure IPv6 Addresses on Network Devices 3.png>)
+- Ping S1 management interface from PC-A
+ ![alt text](<Configure IPv6 Addresses on Network Devices 5.png>)
+- Use `tracert` from PC-A to PC-B 
+ ![alt text](<Configure IPv6 Addresses on Network Devices 4-1.png>)
+- From PC-B, ping PC-A 
+ ![alt text](<Configure IPv6 Addresses on Network Devices 6.png>)
 - From PC-B, ping `fe80::1` (R1 G0/0/0)
+
 
 **Note:** If connectivity fails, verify IPv6 address assignments on all devices.
 
@@ -109,8 +126,12 @@ In this lab, you will configure IPv6 addresses on hosts and network devices. You
 1. Why can the same link-local address `fe80::1` be assigned to both Ethernet interfaces on R1?  
    _Answer:_  
 
+   Link-local addresses are valid within a single network so the same link-local address can be used. 
+
 2. What is the Subnet ID of the IPv6 unicast address `2001:db8:acad::aaaa:1234/64`?  
    _Answer:_  
+
+   The first 64 bits of the address is the Subnet ID 2001:db8:acad. 
 
 ---
 

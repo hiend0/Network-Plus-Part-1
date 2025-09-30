@@ -169,4 +169,4 @@ Fill out the tables below with appropriate answers based on the given IP address
 **Why is the subnet mask so important when analyzing an IPv4 address?**  
 _Answer:_  
 
-Without the subnet mask, the IPv4 address alone will tell you nothing. Subnet mask with your IPv4 address will determine if the destination is on a local network or remote network, number of host bits, broadcast address, and number of hosts. 
+Without the subnet mask, the IPv4 address alone will tell you nothing. Subnet mask with your IPv4 address will determine if the destination is on a local network or remote network, number of host bits, broadcast address, and number of hosts.

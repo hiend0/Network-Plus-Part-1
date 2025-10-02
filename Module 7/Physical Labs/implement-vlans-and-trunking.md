@@ -53,13 +53,21 @@
 7. Create a login banner  
 8. Save the configuration  
 
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking .png>)
+
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 1.png>)
+
+
 ---
 
 ### Step 3: Configure PC hosts
 
 - Refer to the Addressing Table for IP configuration  
 **Screenshot Placeholder:**  
-`!PC IP Configuration`
+
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 2.png>)
+
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 3.png>)
 
 ---
 
@@ -71,6 +79,9 @@
 2. Configure management interface with IP address  
 3. Assign unused ports to VLAN 999 (ParkingLot), set to static access mode, and shut them down  
 
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 4.png>)
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 5.png>)
+
 ---
 
 ### Step 2: Assign VLANs to the correct switch interfaces
@@ -78,6 +89,14 @@
 1. Assign used ports to appropriate VLANs  
 2. Configure static access mode  
 3. Verify VLAN assignments using `show vlan brief`  
+
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 6.png>)
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 7.png>)
+
+#### Show VLAN Brief
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 8.png>)
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 9.png>)
+
 
 ---
 
@@ -90,15 +109,20 @@
 3. Allow VLANs 10, 20, 30, and 1000 on the trunk  
 4. Verify trunking with `show interfaces trunk`  
 
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 10.png>)
+![alt text](<3.6.2 Lab – Implement VLANs and Trunking 11.png>)
+
 ---
 
 ### Step 2: Verify connectivity
 
 - **Can PC-A ping S1 VLAN 20?**  
   _Answer:_  
+  Yes
 
 - **Were the pings from PC-B to S2 successful? Explain.**  
   _Answer:_  
+  No, the ping request timed out because they are not in the same VLAN. 
 
 ---
 
@@ -106,3 +130,5 @@
 
 **Why is trunking important for VLAN communication across switches? What issues might arise if trunking is misconfigured?**  
 _Answer:_  
+
+Trunking allows multiple VLANs to carried accross a single physical link between switches and routers. If misconfigured, devices in the same VLAN but different switches won't be able to communicate. 
